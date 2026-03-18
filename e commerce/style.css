@@ -1,0 +1,142 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #222;
+    padding: 0 5%;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    background-color: #f3ece7;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.hero-text {
+    flex: 1;
+    padding: 60px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-img {
+    flex: 1;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.btn-main {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Category Grid */
+.categories {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    margin: 40px 0;
+    height: 300px;
+}
+
+.cat-large {
+    grid-row: span 2;
+    background: #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.cat-small {
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.pink { background-color: #fce4ec; }
+.blue { background-color: #e3f2fd; }
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+
+.img-hold {
+    width: 100%;
+    height: 350px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.btn-shop {
+    background: none;
+    border: none;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}

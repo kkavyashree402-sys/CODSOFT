@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-Shop | Premium E-commerce</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff4d6d;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            background-color: #f4eee9;
+            margin: 20px 5%;
+            border-radius: 15px;
+            overflow: hidden;
+            align-items: center;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-image {
+            flex: 1;
+            height: 450px;
+            background: url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800') center/cover;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 2px solid #000;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        /* Category Grid */
+        .categories {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 20px;
+            padding: 50px 5%;
+        }
+
+        .cat-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 30px;
+            position: relative;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            cursor: pointer;
+        }
+
+        .cat-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Product Grid */
+        .products-section {
+            padding: 0 5% 50px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            transition: 0.3s;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            background-color: #eee;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .shop-now {
+            text-decoration: underline;
+            font-weight: bold;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero, .categories {
+                flex-direction: column;
+                grid-template-columns: 1fr;
+            }
+            .nav-links { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">B-Shop</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <span>🔍</span> &nbsp; <span>👤</span> &nbsp; <span>👜</span>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Admire Stylish<br>Dresses & Looks</h1>
+            <p>Your destination for premium fashion and seasonal trends.</p>
+            <a href="#" class="btn">Shop More</a>
+        </div>
+        <div class="hero-image"></div>
+    </section>
+
+    <section class="categories">
+        <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600');">
+            <span class="cat-overlay">Women Collection</span>
+        </div>
+        <div class="cat-card" style="background: #e3f2fd; color: #333;">
+            <span style="color: #333; font-weight: bold;">Bestsellers →</span>
+        </div>
+        <div class="cat-card" style="background: #fce4ec; color: #333;">
+            <span style="color: #333; font-weight: bold;">Denim Jackets →</span>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <h2 style="margin-bottom: 30px;">You may like</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1539109132314-d4a8c77ee8c8?w=500" alt="Product" class="product-img">
+                <h3>Women's black vest Gucci</h3>
+                <span class="price">$ 715</span>
+                <span class="shop-now">Shop Now</span>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500" alt="Product" class="product-img">
+                <h3>Red dress Valentino</h3>
+                <span class="price">$ 1,610</span>
+                <span class="shop-now">Shop Now</span>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500" alt="Product" class="product-img">
+                <h3>Shiny dress Givenchy</h3>
+                <span class="price">$ 540</span>
+                <span class="shop-now">Shop Now</span>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
